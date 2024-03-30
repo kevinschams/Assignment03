@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlotPocket.Server", "PlotPocket.Server\PlotPocket.Server.csproj", "{EC7B9F73-9032-4E8C-89A3-F9DE75992B7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC7B9F73-9032-4E8C-89A3-F9DE75992B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC7B9F73-9032-4E8C-89A3-F9DE75992B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC7B9F73-9032-4E8C-89A3-F9DE75992B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC7B9F73-9032-4E8C-89A3-F9DE75992B7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1C9BF59-0F71-432E-AA80-DD75865CE8A7}
+	EndGlobalSection
+EndGlobal

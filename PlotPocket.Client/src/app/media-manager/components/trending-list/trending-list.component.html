@@ -1,0 +1,63 @@
+<div class="container mx-auto px-4 mt-12">
+
+  <div class="mt-8">
+    <div class="flex justify-center gap-4 mb-8">
+      <button
+        (click)="getAllTrending()"
+        [ngClass]="{
+          'bg-blue-500 text-white': currentFilter === 'allTrending',
+          'bg-gray-200 text-gray-700': currentFilter !== 'allTrending'
+        }"
+        class="px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        type="button"
+      >
+        All Trending
+      </button>
+      <button
+        (click)="getTrendingMovies()"
+        [ngClass]="{
+          'bg-blue-500 text-white': currentFilter === 'trendingMovies',
+          'bg-gray-200 text-gray-700': currentFilter !== 'trendingMovies'
+        }"
+        class="px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        type="button"
+      >
+        Trending Movies
+      </button>
+      <button
+        (click)="getTrendingTvShows()"
+        [ngClass]="{
+          'bg-blue-500 text-white': currentFilter === 'trendingTvShows',
+          'bg-gray-200 text-gray-700': currentFilter !== 'trendingTvShows'
+        }"
+        class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        type="button"
+      >
+        Trending TV Shows
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">
+      {{ title }}
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" *ngIf="currentFilter === 'allTrending'">
+      <div *ngFor="let show of trendingList$ | async" class="flex flex-col w-full">
+        <div>{{show.title}}</div>
+          <!-- <app-show-card [show]="show"></app-show-card> -->
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" *ngIf="currentFilter === 'trendingMovies'">
+      <div *ngFor="let show of trendingMovies$ | async" class="flex flex-col w-full">
+        <div>{{ show.title }}</div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" *ngIf="currentFilter === 'trendingTvShows'">
+      <div *ngFor="let show of trendingTvShows$ | async" class="flex flex-col w-full">
+        <div>{{ show.title }}</div>
+      </div>
+    </div>
+  </div>
+</div>
