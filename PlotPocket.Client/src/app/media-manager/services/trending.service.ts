@@ -19,9 +19,10 @@ export class TrendingService {
   public trendingMovies$: Observable<Show[] | []> = this._trendingMoviesSubject.asObservable();
   public trendingTvShows$: Observable<Show[] | []> = this._trendingTvShowsSubject.asObservable();
 
-  
+
 
   constructor() { }
+
 
   public getAllTrending(): void {
     this._http.get<Show[]>(`/api/trending`).subscribe(showList => {
@@ -41,9 +42,5 @@ export class TrendingService {
     });
   }
 
-  // public getAllTrending(): Observable<Show[]> {
-    
-  //   return this._http.get<Show[]>(`/api/trending`);      
-  // }
 
 }

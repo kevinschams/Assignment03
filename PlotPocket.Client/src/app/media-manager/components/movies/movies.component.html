@@ -1,0 +1,62 @@
+<div class="container mx-auto px-4 mt-12">
+
+  <div class="mt-8">
+    <div class="flex justify-center gap-4 mb-8">
+      <button
+        (click)="getNowPlaying()"
+        [ngClass]="{
+          'bg-blue-500 text-white': currentFilter === 'nowPlaying',
+          'bg-gray-200 text-gray-700': currentFilter !== 'nowPlaying'
+        }"
+        class="px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        type="button"
+      >
+        Now Playing
+      </button>
+      <button
+        (click)="getTopRated()"
+        [ngClass]="{
+          'bg-blue-500 text-white': currentFilter === 'topRated',
+          'bg-gray-200 text-gray-700': currentFilter !== 'topRated'
+        }"
+        class="px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        type="button"
+      >
+        Top Rated
+      </button>
+      <button
+        (click)="getPopular()"
+        [ngClass]="{
+          'bg-blue-500 text-white': currentFilter === 'popular',
+          'bg-gray-200 text-gray-700': currentFilter !== 'popular'
+        }"
+        class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        type="button"
+      >
+        Popular
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">
+      {{ title }}
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" *ngIf="currentFilter === 'nowPlaying'">
+      <div *ngFor="let show of nowPlaying$ | async" class="flex flex-col w-full">
+        <div>{{ show.title }}</div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" *ngIf="currentFilter === 'topRated'">
+      <div *ngFor="let show of topRated$ | async" class="flex flex-col w-full">
+        <div>{{ show.title }}</div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" *ngIf="currentFilter === 'popular'">
+      <div *ngFor="let show of popular$ | async" class="flex flex-col w-full">
+        <div>{{ show.title }}</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { TrendingService } from '../../services/trending.service';
 import { Observable} from 'rxjs';
 import { Show } from '../../models/show';
@@ -24,6 +24,7 @@ export class TrendingListComponent implements OnInit {
 
       console.log("after");
     }
+
 
     public getAllTrending(): void {
       this.title = "Trending Movies and TV Shows";
