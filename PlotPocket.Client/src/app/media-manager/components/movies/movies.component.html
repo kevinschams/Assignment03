@@ -43,19 +43,19 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" *ngIf="currentFilter === 'nowPlaying'">
       <div *ngFor="let show of nowPlaying$ | async" class="flex flex-col w-full">
-        <div>{{ show.title }}</div>
+        <app-show-card [show]="show"></app-show-card>
       </div>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" *ngIf="currentFilter === 'topRated'">
       <div *ngFor="let show of topRated$ | async" class="flex flex-col w-full">
-        <div>{{ show.title }}</div>
+          <app-show-card [show]="show"></app-show-card>
       </div>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" *ngIf="currentFilter === 'popular'">
       <div *ngFor="let show of popular$ | async" class="flex flex-col w-full">
-        <div>{{ show.title }}</div>
+          <app-show-card [show]="show"></app-show-card>
       </div>
     </div>
   </div>

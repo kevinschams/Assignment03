@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kevin\\OneDrive\\Desktop\\FIFTH_SEM\\asp_dotnet_spring_2024_student\\Assignment03\\PlotPocket.Server\\PlotPocket.Server.csproj": {}
+    "C:\\Users\\003035632\\OneDrive - Western Wisconsin Technical College\\Desktop\\Fresh\\Assignment03\\PlotPocket.Server\\PlotPocket.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kevin\\OneDrive\\Desktop\\FIFTH_SEM\\asp_dotnet_spring_2024_student\\Assignment03\\PlotPocket.Server\\PlotPocket.Server.csproj": {
+    "C:\\Users\\003035632\\OneDrive - Western Wisconsin Technical College\\Desktop\\Fresh\\Assignment03\\PlotPocket.Server\\PlotPocket.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Desktop\\FIFTH_SEM\\asp_dotnet_spring_2024_student\\Assignment03\\PlotPocket.Server\\PlotPocket.Server.csproj",
+        "projectUniqueName": "C:\\Users\\003035632\\OneDrive - Western Wisconsin Technical College\\Desktop\\Fresh\\Assignment03\\PlotPocket.Server\\PlotPocket.Server.csproj",
         "projectName": "PlotPocket.Server",
-        "projectPath": "C:\\Users\\kevin\\OneDrive\\Desktop\\FIFTH_SEM\\asp_dotnet_spring_2024_student\\Assignment03\\PlotPocket.Server\\PlotPocket.Server.csproj",
-        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kevin\\OneDrive\\Desktop\\FIFTH_SEM\\asp_dotnet_spring_2024_student\\Assignment03\\PlotPocket.Server\\obj\\",
+        "projectPath": "C:\\Users\\003035632\\OneDrive - Western Wisconsin Technical College\\Desktop\\Fresh\\Assignment03\\PlotPocket.Server\\PlotPocket.Server.csproj",
+        "packagesPath": "C:\\Users\\003035632\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\003035632\\OneDrive - Western Wisconsin Technical College\\Desktop\\Fresh\\Assignment03\\PlotPocket.Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\003035632\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -99,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

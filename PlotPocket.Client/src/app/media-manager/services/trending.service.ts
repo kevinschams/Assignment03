@@ -30,7 +30,7 @@ export class TrendingService {
     });
   }
 
-    public getAllTrendingMovies(): void {
+  public getAllTrendingMovies(): void {
     this._http.get<Show[]>(`/api/trending/movies`).subscribe(showList => {
       this._trendingMoviesSubject.next(showList);
     });

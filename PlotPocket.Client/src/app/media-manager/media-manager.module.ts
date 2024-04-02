@@ -18,7 +18,8 @@ import { AppShowCardComponent } from './components/app-show-card/app-show-card.c
   ],
   imports: [
     CommonModule,
-    MediaManagerRoutingModule
+    MediaManagerRoutingModule,
+    // AppShowCardComponent
   ]
 })
 export class MediaManagerModule { }

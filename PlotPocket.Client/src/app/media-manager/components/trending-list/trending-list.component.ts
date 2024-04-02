@@ -21,7 +21,6 @@ export class TrendingListComponent implements OnInit {
     ngOnInit(): void {
       console.log("before");
       this.getAllTrending();
-
       console.log("after");
     }
 

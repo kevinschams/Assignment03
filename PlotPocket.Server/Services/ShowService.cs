@@ -1,3 +1,4 @@
+using System.Data.Common;
 using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using PlotPocket.Server.Data;
@@ -23,14 +24,7 @@ public class ShowService {
         _posterPathImgSize = _config.GetValue<string>("TMDB:Images:PosterSizes:Large") ?? "";
     }
 
-    /**
-     * Below can be used for converting return objects from the Trending endpoints 
-     * to ShowDtos. 
-     * 
-     * TODO: Make sure to fill in the ShowDto properties on the return of this method.
-     *          You should **NOT** need to modify anything else.
-     * 
-     **/
+
     public ShowDto MediaItemToShowDto(ApiMediaItem mediaItem) {
         string? dateToParse = mediaItem switch {
             // Movie movie => movie.ReleaseDate,
@@ -46,8 +40,8 @@ public class ShowService {
             title = trendingMedia.MediaType == "movie" ? trendingMedia.Title : trendingMedia?.Name;
 
         } else {
-            // title = (mediaItem as Movie)?.Title ?? (mediaItem as TvShow)?.Name;
-            title = "NEED TO IMPLEMENT";
+            title = (mediaItem as Movie)?.Title ?? (mediaItem as TvShow)?.Name;
+            // title = "NEED TO IMPLEMENT";
         }
 
         return new ShowDto {
@@ -62,7 +56,7 @@ public class ShowService {
     public ShowDto MovieToShowDto(Movie movie) {
         return new ShowDto {
             Id = movie.Id,
-            Type = "Movie",
+            Type = "movie",
             Title = movie.Title,
             Date = DateTime.TryParse(movie.ReleaseDate, out DateTime parsedDate) ? parsedDate : (DateTime?)null,
             PosterPath = $"{_secureBaseUrl}{_posterPathImgSize}{movie.PosterPath}"
@@ -72,7 +66,7 @@ public class ShowService {
     public ShowDto TvShowToShowDto(TvShow tvShow) {
         return new ShowDto {
             Id = tvShow.Id,
-            Type = "TV Show",
+            Type = "tv",
             Title = tvShow.Name,
             Date = DateTime.TryParse(tvShow.FirstAirDate, out DateTime parsedDate) ? parsedDate : (DateTime?)null,
             PosterPath = $"{_secureBaseUrl}{_posterPathImgSize}{tvShow.PosterPath}"

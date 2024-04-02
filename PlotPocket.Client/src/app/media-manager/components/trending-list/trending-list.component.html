@@ -43,20 +43,19 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" *ngIf="currentFilter === 'allTrending'">
       <div *ngFor="let show of trendingList$ | async" class="flex flex-col w-full">
-        <div>{{show.title}}</div>
-          <!-- <app-show-card [show]="show"></app-show-card> -->
+          <app-show-card [show]="show"></app-show-card>
         </div>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" *ngIf="currentFilter === 'trendingMovies'">
       <div *ngFor="let show of trendingMovies$ | async" class="flex flex-col w-full">
-        <div>{{ show.title }}</div>
+        <app-show-card [show]="show"></app-show-card>
       </div>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" *ngIf="currentFilter === 'trendingTvShows'">
       <div *ngFor="let show of trendingTvShows$ | async" class="flex flex-col w-full">
-        <div>{{ show.title }}</div>
+        <app-show-card [show]="show"></app-show-card>
       </div>
     </div>
   </div>
