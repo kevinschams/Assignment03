@@ -41,7 +41,6 @@ public class ShowService {
 
         } else {
             title = (mediaItem as Movie)?.Title ?? (mediaItem as TvShow)?.Name;
-            // title = "NEED TO IMPLEMENT";
         }
 
         return new ShowDto {

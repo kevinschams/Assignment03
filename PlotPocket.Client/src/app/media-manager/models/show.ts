@@ -1,5 +1,5 @@
 export interface Show {
-  id: number; // If this is something other than 0, it is bookmarked
+  id: number; 
   showApiId: number;
   type: string;
   title: string;
