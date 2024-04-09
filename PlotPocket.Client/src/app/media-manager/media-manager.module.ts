@@ -7,6 +7,7 @@ import { MovieService } from './services/movie.service';
 import { MoviesListComponent } from './components/movies/movies.component';
 import { TvShowsListComponent } from './components/tv-shows/tv-shows.component';
 import { AppShowCardComponent } from './components/app-show-card/app-show-card.component';
+import { Router, RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { AppShowCardComponent } from './components/app-show-card/app-show-card.c
   ],
   imports: [
     CommonModule,
-    MediaManagerRoutingModule,
+    MediaManagerRoutingModule
   ]
 })
 export class MediaManagerModule { }
